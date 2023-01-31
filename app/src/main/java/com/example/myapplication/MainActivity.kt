@@ -10,8 +10,8 @@ import com.example.myapplication.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     val TAG: String = "로그"
     private lateinit var binding: ActivityMainBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,SecondActivity::class.java)
             startActivity(intent)
         })
-
     }
     fun onLoginButtonClicked(){
         Log.d(TAG, "MainActivity - onLoginButtonClicked() called")
     }
+    fun onBackButtonClicked(view: View) {}
 }

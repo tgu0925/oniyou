@@ -5,18 +5,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity">
+    tools:context=".MainActivity"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:weightSum="5"
+    android:baselineAligned="false">
 
-
-    <ImageView
-        android:onClick="onBackButtonClicked"
-        android:id="@+id/back"
-        android:layout_width="176dp"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="330dp"
         android:layout_weight="1"
-        android:minHeight="48dp"
-        app:srcCompat="@drawable/backbtn"
-        tools:ignore="ContentDescription,InefficientWeight,UsingOnClickInXml,SpeakableTextPresentCheck" />
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/backbtn"
+            android:minWidth="40dp"
+            android:minHeight="40dp"
+            android:onClick="onBackButtonClicked"
+            tools:ignore="ContentDescription,InefficientWeight,MissingPrefix,SpeakableTextPresentCheck,TouchTargetSizeCheck,UsingOnClickInXml" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="3"
+        tools:ignore="UselessLeaf">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginTop="160dp"
+            android:text="교과서는 매년 우리학교 지정 출판사가\n달라짐에 따라 견본자료와 다를 수 있습니다."
+            android:textSize="13dp"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/choose_grade_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="#FFFFFF"
+            app:srcCompat="@drawable/grade_one"
+            tools:ignore="ContentDescription,ImageContrastCheck,InefficientWeight,NestedWeights,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/choose_grade_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="#FFFFFF"
+            app:srcCompat="@drawable/grade_two"
+            tools:ignore="ContentDescription,ImageContrastCheck,InefficientWeight,NestedWeights,SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="3dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/oniyou_small"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    </LinearLayout>
+
+
 </LinearLayout>
